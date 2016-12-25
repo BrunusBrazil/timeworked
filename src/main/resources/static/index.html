@@ -2,33 +2,110 @@
 <!--[if lt IE 7]>      <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" ng-app="app" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="app" class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> 
+<html lang="en" ng-app="timeworked" class="no-js"> <!--<![endif]-->
+
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Spring boot and Angularjs Tutorial</title>
-    <meta name="description" content=""> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/app.css">
+    <meta name="description" content="">
+    <meta name="author" content="BCS-IT">
+
+    <title>BCS-IT Time Report</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/css/bootstrap/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="/css/bootstrap/css/grayscale.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
-<body>
-<h2>Administrator Panel</h2>
-<div class="home-section">
-		
-		<script src="http://www.clocklink.com/embed.js"></script> <script type="text/javascript" language="JavaScript">obj=new Object;obj.clockfile="5012-blue.swf";obj.TimeZone="ACST"; obj.width=227;obj.height=75;obj.wmode="transparent";showClock(obj);</script>
 
 
-    <ul class="menu-list">
-        <li><a href="#/users">Users</a></li>
-        <li><a href="#/roles">Roles</a></li>
-    </ul>
-</div>
-<div ng-view></div>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle"></i> <span class="light"> BCS-IT </span>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a href="#person">Sing up</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#download">Reports</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container" ng-view >
+            </div>
+        </div>
+    </header>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Your Website 2016</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="/css/bootstrap/vendor/jquery/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/css/bootstrap/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+
+	<!-- ANGULAR -->	
 <script src="/webjars/angularjs/1.4.9/angular.js"></script>
 <script src="/webjars/angularjs/1.4.9/angular-resource.js"></script>
 <script src="/webjars/angularjs/1.4.9/angular-route.js"></script>
-<script src="/js/app.js"></script>
-<script src="/js/controller.js"></script>
-<link rel="stylesheet" href="/webjars/bootstrap/3.3.6/css/bootstrap.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/lodash/4.17.2/lodash.min.js"></script>
+<script src="/js/app/restangular.js"></script>
+<script src="/js/app/person/person.module.js"></script>
+<script src="/js/app/person/person.controller.js"></script>
+<script src="/js/app/person/person.service.js"></script>
+<script src="/js/app/app.js"></script>
 </body>
 </html>
