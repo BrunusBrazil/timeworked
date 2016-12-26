@@ -1,14 +1,15 @@
 var module = angular.module('personModule');
 
-
      module.service('personService', ['Restangular',function(Restangular){
 		
-		function getPerson(id){
-			return  Restangular.one('Person', id).get();
+    	 var base = Restangular.all('Person/');
+
+    	function create(person){
+			return  base.post(person);
 		}
 		
 		return  {
-				getPerson:getPerson
+				create:create
 		}
 		
 	}]);

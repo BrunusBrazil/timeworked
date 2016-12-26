@@ -8,6 +8,13 @@ module.controller('PersonController',['$scope','personService',function PersonCo
 		});
 	}
 	
+	$scope.create = function (person){
+		personService.create(person).then(function (person) {
+			$scope.person = person;
+		});
+		
+	}
+	
 }]);
 
 
